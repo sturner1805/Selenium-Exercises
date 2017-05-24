@@ -74,19 +74,20 @@ public class Login {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Searching....");
 		
-		WebElement menu = driver.findElement(By.id("u_0_4"));
+		WebElement menu = driver.findElement(By.id("userNavigationLabel"));
 		menu.click();
+		WebElement logoutBtn = driver.findElement(By.id("js_5c"));
+		logoutBtn.click();
 		
-		try{	
-			driver.findElement(By.id("u_jsonp_2_8"));
-			System.out.println("Passed");
-		}
-		catch (Exception e){
-			e.printStackTrace();
-			System.out.println("Failed");
-		}
-//		WebElement logoutBtn = driver.findElement(By.name("_54nh"));
-//		logoutBtn.click();
+//		try{	
+//			driver.findElement(By.id("u_jsonp_2_8"));
+//			System.out.println("Passed");
+//		}
+//		catch (Exception e){
+//			e.printStackTrace();
+//			System.out.println("Failed");
+//		}
+		
 		
 	}
 }
